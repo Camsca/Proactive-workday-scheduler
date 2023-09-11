@@ -22,4 +22,7 @@ $(function(){
   //get actual hour in a 24hr format
   var currentHour = dayjs().format('H');
   
-})
+  $('.time-block').each(function(){
+    var blockHour = parseInt($(this).attr('id').split('-')[1]);
+    
+  });
