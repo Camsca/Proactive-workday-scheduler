@@ -4,11 +4,17 @@
 $(function () {
 $(".saveBtn").on("click",function(){
   var blockId = $(this).closest (".time-block").attr("id");
-  console.log("Block ID:", blockId); 
+   console.log("Block ID:", blockId); 
   var description = $(this).siblings(".description").val();
   localStorage.setItem(blockId, description);
 });
-
+$(".time-block").each(function () {
+  var blockId = $(this).attr("id");
+  var description = localStorage.getItem(blockId);
+  if (description !== null) {
+    $(this).find(".description").val(description);
+  }
+});
 
 });
 // TODO: Add code to apply the past, present, or future class to each time
