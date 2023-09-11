@@ -26,6 +26,8 @@ $(function(){
     var blockHour = parseInt($(this).attr('id').split('-')[1]);
     if (blockHour<currentHour){
       $(this).addClass ('past');
+    } else if (blockHour === currentHour){
+      $(this).addClass ('present');
     }
   
 
