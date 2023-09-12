@@ -35,8 +35,9 @@ The Work Day Scheduler is a simple web-based calendar application that allows us
 
 ## Screenshots
 
-![Screenshot of the Work Day Scheduler](Assets/nodess.png)
-
+![Screenshot of the Work Day Scheduler](Assets/nodess.png) 
+https://camsca.github.io/Proactive-workday-scheduler/
+https://github.com/Camsca/Proactive-workday-scheduler
 ## Acknowledgments
 
 - This project is based on starter code provided by [Xandromus](https://github.com/Xandromus).
