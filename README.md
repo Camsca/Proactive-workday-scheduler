@@ -40,6 +40,6 @@ The Work Day Scheduler is a simple web-based calendar application that allows us
 ## Acknowledgments
 
 - This project is based on starter code provided by [Xandromus](https://github.com/Xandromus).
-- I contributed additional features and functionality to enhance the project.
+- I contributed additional functionality to enhance the project.
 
 

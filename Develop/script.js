@@ -1,5 +1,28 @@
 
 $(function () {
+  //get actual hour in a 24hr format
+  var currentHour = dayjs().hour();
+  console.log("Current Hour:", currentHour);
+  //iterate throuhgh the time blocks and aply the appropriate classes
+  $('.time-block').each(function(){
+    var blockHour = parseInt($(this).attr('id').split('-')[1]);
+    console.log("Block Hour:", blockHour);
+    if (blockHour<currentHour){
+      $(this).addClass ('past');
+    } else if (blockHour === currentHour){
+      $(this).addClass ('present');
+    }else {
+      $(this).addClass('future');
+    }
+    
+    
+  });
+  // Get the current date and display it in the header
+  var currentDate = dayjs().format('MMMM D , YYYY');
+  console.log("Current Date:", currentDate); 
+  $('#currentDay').text(currentDate);
+
+});
   // When a "saveBtn" is clicked, store the description in local storage with its corresponding "time-block" ID
  $(".saveBtn").on("click",function(){
    var blockId = $(this).closest (".time-block").attr("id");
@@ -19,29 +42,6 @@ $(function () {
    }
  });
  
-});
 
-$(function(){
- //get actual hour in a 24hr format
- var currentHour = dayjs().hour();
- console.log("Current Hour:", currentHour);
- //iterate throuhgh the time blocks and aply the appropriate classes
- $('.time-block').each(function(){
-   var blockHour = parseInt($(this).attr('id').split('-')[1]);
-   console.log("Block Hour:", blockHour);
-   if (blockHour<currentHour){
-     $(this).addClass ('past');
-   } else if (blockHour === currentHour){
-     $(this).addClass ('present');
-   }else {
-     $(this).addClass('future');
-   }
-   
-   
- });
-});
 
-// Get the current date and display it in the header
-var currentDate = dayjs().format('MMMM D , YYYY');
-console.log("Current Date:", currentDate); 
-$('#currentDay').text(currentDate);
+
